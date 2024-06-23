@@ -9,6 +9,7 @@ import { MenuComponent } from './routes/menu/menu.component';
 import { SobreEmpresaComponent } from './routes/sobre-empresa/sobre-empresa.component';
 import { SucursalesComponent } from './routes/sucursales/sucursales.component';
 import { CarritoComponent } from './routes/carrito/carrito.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { CarritoComponent } from './routes/carrito/carrito.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
