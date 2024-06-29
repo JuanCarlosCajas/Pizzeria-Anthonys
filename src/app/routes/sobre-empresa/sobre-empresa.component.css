@@ -1,0 +1,79 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+.image-container {
+    flex: 0 0 auto;
+    margin-right: 20px;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.text-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+.text-container h2 {
+    color: red;
+    font-weight: bold;
+    text-align: center;
+}
+.text-container p {
+    white-space: pre-line;
+    text-align: justify;
+}
+/* ********************************** */
+/*             contarner2             */
+/* ********************************** */
+.container2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 100px;
+
+
+}
+.section {
+    background-color: white;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.section h2{
+    color: #333;
+    margin-top: 0;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+}
+
+.content p {
+    flex: 1;
+    margin: 0;
+    white-space: pre-line;
+    text-align: justify;
+    font-size: 20px;
+}
+
+.content img {
+    width: 200px;
+    height: auto;
+    margin-left: 20px;
+}

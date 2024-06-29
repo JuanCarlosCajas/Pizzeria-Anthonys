@@ -10,6 +10,7 @@ import { SobreEmpresaComponent } from './routes/sobre-empresa/sobre-empresa.comp
 import { SucursalesComponent } from './routes/sucursales/sucursales.component';
 import { CarritoComponent } from './routes/carrito/carrito.component';
 import { HttpClientModule } from '@angular/common/http';
+import { UsersComponent } from './routes/users/users.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { HttpClientModule } from '@angular/common/http';
     MenuComponent,
     SobreEmpresaComponent,
     SucursalesComponent,
-    CarritoComponent
+    CarritoComponent,
+    UsersComponent
   ],
   imports: [
     BrowserModule,

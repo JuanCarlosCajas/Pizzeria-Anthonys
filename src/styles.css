@@ -5,12 +5,24 @@
 
 :root{
     --rojoHeader : #FF1322;
+    --primary-color: #656565;
+	--background-color: rgb(255, 0, 0);
+	--dark-color: #151515;
+}
+.contenedor{
+    border: 2px solid black;
 }
 
-*{
-    padding: 0;
-    margin: 0;
-    font-family: "Kanit";
-    text-decoration: none;
-    list-style-type: none;
+.Cuerpo-Home{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.heading-1 {
+	text-align: center;
+	font-weight: 500;
+	font-size: 3rem;
 }

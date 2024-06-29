@@ -5,6 +5,7 @@ import { MenuComponent } from './routes/menu/menu.component';
 import { CarritoComponent } from './routes/carrito/carrito.component';
 import { SobreEmpresaComponent } from './routes/sobre-empresa/sobre-empresa.component';
 import { SucursalesComponent } from './routes/sucursales/sucursales.component';
+import { UsersComponent } from './routes/users/users.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -12,6 +13,7 @@ const routes: Routes = [
   {path: 'sobre-la-empresa', component: SobreEmpresaComponent},
   {path: 'carrito', component: CarritoComponent},
   {path: 'sucursales', component: SucursalesComponent},
+  {path: 'users', component: UsersComponent},
   {path: '**', redirectTo: '', pathMatch: 'full'}
 ];
 

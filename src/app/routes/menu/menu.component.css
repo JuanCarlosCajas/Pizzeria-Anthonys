@@ -1,0 +1,106 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.search-container {
+    margin-bottom: 20px;
+}
+
+.search-container input[type="text"] {
+    padding: 10px;
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 20px 0 0 20px;
+    background-color: rgb(247, 195, 9);
+}
+
+.search-container button {
+    padding: 10px;
+    background-color: #079d64;
+    border: 1px solid #cccccc;
+    border-left: none;
+    border-radius: 0 20px 20px 0;
+    cursor: pointer;
+}
+
+.search-container button i {
+    font-size: 16px;
+}
+/***************************/
+/*        Card Pizza       */
+/***************************/
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
+    max-width: 1500px;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.product-card {
+    background-color: #ffbf00;
+    border-radius: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 250px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    transition: transform 0.3s ease;
+}
+.product-card:hover {
+    transform: scale(1.4);
+  }
+
+.product-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.product-info {
+    margin-top: 10px;
+}
+
+.product-info h3 {
+    font-size: 16px;
+    color: #333;
+    margin: 10px 0;
+}
+
+.product-info p {
+    font-size: 14px;
+    color: #333;
+    margin: 5px 0;
+}
+
+.price {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.order-button {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.order-button:hover {
+    background-color: #555;
+}
+
