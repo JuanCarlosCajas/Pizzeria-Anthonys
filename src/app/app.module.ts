@@ -11,6 +11,9 @@ import { SucursalesComponent } from './routes/sucursales/sucursales.component';
 import { CarritoComponent } from './routes/carrito/carrito.component';
 import { HttpClientModule } from '@angular/common/http';
 import { UsersComponent } from './routes/users/users.component';
+import { PizzasComponent } from './routes/carrito/pizzas/pizzas.component';
+import { PastasComponent } from './routes/carrito/pastas/pastas.component';
+import { ComplementosComponent } from './routes/carrito/complementos/complementos.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +24,10 @@ import { UsersComponent } from './routes/users/users.component';
     SobreEmpresaComponent,
     SucursalesComponent,
     CarritoComponent,
-    UsersComponent
+    UsersComponent,
+    PizzasComponent,
+    PastasComponent,
+    ComplementosComponent
   ],
   imports: [
     BrowserModule,

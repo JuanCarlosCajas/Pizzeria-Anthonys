@@ -96,10 +96,6 @@
 /*               FOOTER               */
 /* ********************************** */
 
-.footer {
-	background-color: var(--primary-color);
-}
-
 .container-footer {
 	display: flex;
 	flex-direction: column;
@@ -140,7 +136,7 @@
 .information ul li,
 .my-account ul li {
 	list-style: none;
-	color: #fff;
+	color: #1d1d1d;
 	font-size: 1.4rem;
 	font-weight: 300;
 }
@@ -148,7 +144,7 @@
 .information ul li a,
 .my-account ul li a {
 	text-decoration: none;
-	color: #fff;
+	color: #1d1d1d;
 	font-weight: 300;
 }
 

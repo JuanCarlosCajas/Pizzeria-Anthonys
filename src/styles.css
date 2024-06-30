@@ -26,3 +26,7 @@
 	font-weight: 500;
 	font-size: 3rem;
 }
+html {
+	font-size: 85%;
+	font-family: 'Poppins', sans-serif;
+}

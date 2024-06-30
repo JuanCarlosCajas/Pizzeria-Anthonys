@@ -208,10 +208,6 @@
 /*               FOOTER               */
 /* ********************************** */
 
-.footer {
-	background-color: var(--primary-color);
-}
-
 .container-footer {
 	display: flex;
 	flex-direction: column;
@@ -252,7 +248,7 @@
 .information ul li,
 .my-account ul li {
 	list-style: none;
-	color: #fff;
+	color: #1d1d1d;
 	font-size: 1.4rem;
 	font-weight: 300;
 }
@@ -260,7 +256,7 @@
 .information ul li a,
 .my-account ul li a {
 	text-decoration: none;
-	color: #fff;
+	color: #1d1d1d;
 	font-weight: 300;
 }
 
@@ -310,14 +306,13 @@
 	justify-content: space-between;
 	padding-top: 2rem;
 
-	border-top: 1px solid #d2b495;
+	border-top: 1px solid #ff0000;
 }
 
 .copyright p {
 	font-weight: 400;
 	font-size: 1.6rem;
 }
-
 /* ********************************** */
 /*       MEDIA QUERIES -- 768px       */
 /* ********************************** */
