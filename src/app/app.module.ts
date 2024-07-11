@@ -14,7 +14,12 @@ import { UsersComponent } from './routes/users/users.component';
 import { PizzasComponent } from './routes/carrito/pizzas/pizzas.component';
 import { PastasComponent } from './routes/carrito/pastas/pastas.component';
 import { ComplementosComponent } from './routes/carrito/complementos/complementos.component';
-
+import { RegistrarComponent } from './routes/registrar/registrar.component';
+import { DashboardComponent } from './routes/administrador/dashboard/dashboard.component';
+import { ProductoComponent } from './routes/administrador/producto/producto.component';
+import { PedidosComponent } from './routes/administrador/pedidos/pedidos.component';
+import { EmpleadosComponent } from './routes/administrador/empleados/empleados.component';
+import { UsuariosComponent } from './routes/administrador/usuarios/usuarios.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +32,13 @@ import { ComplementosComponent } from './routes/carrito/complementos/complemento
     UsersComponent,
     PizzasComponent,
     PastasComponent,
-    ComplementosComponent
+    ComplementosComponent,
+    RegistrarComponent,
+    DashboardComponent,
+    ProductoComponent,
+    PedidosComponent,
+    EmpleadosComponent,
+    UsuariosComponent
   ],
   imports: [
     BrowserModule,

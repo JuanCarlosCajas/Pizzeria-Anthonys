@@ -1,0 +1,208 @@
+<body>
+  <!-- Main container -->
+  <main class="full-box main-container">
+    <!-- Nav lateral -->
+    <section class="full-box nav-lateral">
+      <div class="full-box nav-lateral-bg show-nav-lateral"></div>
+      <div class="full-box nav-lateral-content">
+        <figure class="full-box nav-lateral-avatar">
+          <i class="far fa-times-circle show-nav-lateral"></i>
+          <img src="/assets/images/Avatar.png" class="img-fluid" alt="Avatar" />
+          <figcaption class="roboto-medium text-center">
+            ANTHONYS PIZZA <br /><small class="roboto-condensed-light"
+              >Administrador</small
+            >
+          </figcaption>
+        </figure>
+        <div class="full-box nav-lateral-bar"></div>
+        <nav class="full-box nav-lateral-menu">
+          <ul>
+            <li>
+              <a href="dashboard"
+                ><i class="fab fa-dashcube fa-fw"></i> &nbsp; Dashboard</a
+              >
+            </li>
+
+            <li>
+              <a href="dproducto" class="nav-btn-submenu"
+                ><i class="fas fa-pallet fa-fw"></i> &nbsp; Productos
+                <i class="fas fa-chevron-down"></i
+              ></a>
+            </li>
+
+            <li>
+              <a href="dpedidos" class="nav-btn-submenu"
+                ><i class="fas fa-user-secret fa-fw"></i> &nbsp; Pedidos
+                <i class="fas fa-chevron-down"></i
+              ></a>
+            </li>
+            <li>
+              <a href="dusuario" class="nav-btn-submenu"
+                ><i class="fas fa-user-secret fa-fw"></i> &nbsp; Usuarios
+                <i class="fas fa-chevron-down"></i
+              ></a>
+            </li>
+            <li>
+              <a href="dempleados" class="nav-btn-submenu"
+                ><i class="fas fa-user-secret fa-fw"></i> &nbsp; Empleados
+                <i class="fas fa-chevron-down"></i
+              ></a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </section>
+
+    <!-- Page content -->
+    <section class="full-box page-content">
+      <!-- <nav class="navbar bg-light"> -->
+      <nav class="navbar" style="background-color: #f13434">
+        <div class="container-fluid">
+          <div class="col-md-4">
+            <h1 style="color: white">Usuarios</h1>
+          </div>
+        </div>
+      </nav>
+
+      <div class="col-md-12 p-2">
+        <button
+          type="button"
+          class="btn btn-primary btn-sm"
+          data-bs-toggle="modal"
+          data-bs-target="#exampleModal"
+        >
+          <i class="fa fa-save"></i> Agregar Usuario
+        </button>
+        <table class="table mt-2 table-bordered">
+          <thead class="table-primary">
+            <tr>
+              <th>Id Usuario</th>
+              <th>Nombres</th>
+              <th>Apellidos</th>
+              <th>Telefono</th>
+              <th>Correo</th>
+              <th>Contraseña</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Leandro</td>
+              <td>Garcia</td>
+              <td>934381133</td>
+              <td>leandro52gmail.com</td>
+              <td>1234</td>
+              <td>
+                <button
+                  type="button"
+                  class="btn btn-warning btn-sm"
+                  data-bs-toggle="modal"
+                  data-bs-target="#exampleModal"
+                >
+                  <i class="fa fa-pencil"></i>
+                </button>
+                &nbsp;
+                <button type="button" class="btn btn-danger btn-sm">
+                  <i class="fa fa-trash"></i>
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- TODO: Modals -->
+      <div
+        class="modal fade"
+        id="exampleModal"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5">Agregar Producto</h1>
+              <h1 class="modal-title fs-5">Actualizar Producto</h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="mb-3 row">
+                  <label class="col-sm-2 col-form-label">Id Usuario</label>
+                  <div class="col-sm-10">
+                    <input
+                      type="text"
+                      class="form-control"
+                      formControlName="Id_Usuario"
+                    />
+                  </div>
+                </div>
+                <div class="mb-3 row">
+                  <label class="col-sm-2 col-form-label">Nombres</label>
+                  <div class="col-sm-10">
+                    <input
+                      type="text"
+                      class="form-control"
+                      formControlName="Nombres"
+                    />
+                  </div>
+                </div>
+                <div class="mb-3 row">
+                  <label class="col-sm-2 col-form-label">Telefono</label>
+                  <div class="col-sm-10">
+                    <input
+                      type="text"
+                      class="form-control"
+                      formControlName="Telefono"
+                    />
+                  </div>
+                </div>
+                <div class="mb-3 row">
+                  <label class="col-sm-2 col-form-label">Correo</label>
+                  <div class="col-sm-10">
+                    <input
+                      type="text"
+                      class="form-control"
+                      formControlName="Correo"
+                    />
+                  </div>
+                </div>
+                <div class="mb-3 row">
+                  <label class="col-sm-2 col-form-label">Contraseña</label>
+                  <div class="col-sm-10">
+                    <input
+                      type="text"
+                      class="form-control"
+                      formControlName="Contraseña"
+                    />
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary btn-sm"
+                data-bs-dismiss="modal"
+              >
+                Cerrar
+              </button>
+              <button type="button" class="btn btn-success btn-sm">
+                Guardar
+              </button>
+              <button type="button" class="btn btn-warning btn-sm">
+                Actualizar
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>

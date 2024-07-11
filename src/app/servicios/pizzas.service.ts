@@ -1,18 +1,18 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { IPizza } from '../modals/pizza.modal';
+import { IProducto } from '../modals/producto.modal';
 
 @Injectable({
   providedIn: 'root'
 })
 export class PizzasService {
 
-  private baseUrl = "http://localhost:8080/api/pizzas"
+  private baseUrl = "http://localhost:8080/api/producto"
 
   constructor(private http: HttpClient) { }
 
-  public obtenerPizzas() : Observable<IPizza[]>{
-    return this.http.get<IPizza[]>(this.baseUrl);
+  public obtenerPizzas() : Observable<IProducto[]>{
+    return this.http.get<IProducto[]>(this.baseUrl);
   }
 }

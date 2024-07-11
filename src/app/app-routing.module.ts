@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './routes/home/home.component';
 import { MenuComponent } from './routes/menu/menu.component';
@@ -9,6 +9,12 @@ import { UsersComponent } from './routes/users/users.component';
 import { PizzasComponent } from './routes/carrito/pizzas/pizzas.component';
 import { PastasComponent } from './routes/carrito/pastas/pastas.component';
 import { ComplementosComponent } from './routes/carrito/complementos/complementos.component';
+import { RegistrarComponent } from './routes/registrar/registrar.component';
+import { DashboardComponent } from './routes/administrador/dashboard/dashboard.component';
+import { ProductoComponent } from './routes/administrador/producto/producto.component';
+import { PedidosComponent } from './routes/administrador/pedidos/pedidos.component';
+import { EmpleadosComponent } from './routes/administrador/empleados/empleados.component';
+import { UsuariosComponent } from './routes/administrador/usuarios/usuarios.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -20,6 +26,12 @@ const routes: Routes = [
   {path: 'pizzas', component: PizzasComponent},
   {path: 'pastas', component: PastasComponent},
   {path: 'complementos', component: ComplementosComponent},
+  {path: 'registrar', component: RegistrarComponent},
+  {path: 'dashboard', component: DashboardComponent},
+  {path: 'dproducto', component: ProductoComponent},
+  {path: 'dpedidos', component:PedidosComponent},
+  {path: 'dempleados', component:EmpleadosComponent},
+  {path: 'dusuario', component: UsuariosComponent},
   {path: '**', redirectTo: '', pathMatch: 'full'}
 ];
 
