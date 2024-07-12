@@ -1,6 +1,6 @@
 <header class="col-12 Cabecera">
     <a class="col-2 d-flex justify-content-center navbar-brand" routerLink="" title="home">
-        <img class="fotoCabecera" src={{fotoCabecera}} alt="">
+        <img class="fotoCabecera" [src]="fotoCabecera" alt="">
     </a>
     <div class="navbar col-7">
         <ul class="navbar-nav me-auto mb-2 flex flex-row justify-content-evenly col-12">
@@ -23,8 +23,10 @@
             <button type="button" title="Busqueda" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="This top tooltip is themed via CSS variables." class="btn boton-cabecera">
                 <i class="bx bx-search-alt-2"></i>
             </button>
-            <button type="button" title="Carrito" class="boton-cabecera">
+    
+            <button type="button" title="Carrito" class="boton-cabecera" (click)="toggleCartVisibility()">
                 <i class="bx bx-cart"></i>
+                <span class="badge">{{ cart.length }}</span>
             </button>
             <button type="button" title="Usuario" class="boton-cabecera" routerLink="users">
                 <i class="bx bx-user"></i>
@@ -32,3 +34,24 @@
         </div>
     </div>
 </header>
+
+<!-- Carrito modal -->
+<div class="cart-modal" *ngIf="cartVisible">
+    <div class="container-cart-products">
+        <div *ngFor="let item of cart" class="cart-product">
+            <div class="info-cart-product">
+                <span class="cantidad-producto-carrito">{{ item.quantity }}</span>
+                <p class="titulo-producto-carrito">{{ item.name }}</p>
+                <span class="precio-producto-carrito">S/{{ item.price }}</span>
+                <button type="button" (click)="removeProduct(item)">Eliminar</button>
+            </div>
+        </div>
+        
+        <div class="cart-total">
+            <h3>Total:</h3>
+            <span class="total-pagar">{{ totalCart }}</span>
+        </div>
+        <p *ngIf="cart.length === 0" class="cart-empty">El carrito está vacío</p>
+        <button type="button" (click)="toggleCartVisibility()">Cerrar</button>
+    </div>
+</div>

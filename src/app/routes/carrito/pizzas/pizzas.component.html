@@ -8,7 +8,10 @@
       <span [routerLink]="['/pastas']">PASTAS</span>
       <span [routerLink]="['/complementos']">COMPLEMENTOS</span>
     </div>
+     <!-- carrito icono -->
 
+  
+ <!-- carrito icono -->
     <div class="container-products">
       <!-- Producto 1 -->
       <div class="card-product">
@@ -17,10 +20,8 @@
         </div>
         <div class="content-card-product">
           <h3>Pizza familiar Napolitana</h3>
-          <span class="add-cart">
-            <i class="bx bx-cart"></i>
-          </span>
           <p class="price">S/29.90</p>
+          <button class="btn-add-cart" (click)="addToCart('Pizza familiar Napolitana', 29.90)">Añadir al carrito</button>
         </div>
       </div>
       <!-- Producto 2 -->
@@ -33,13 +34,11 @@
         </div>
         <div class="content-card-product">
           <h3>Pizzas familiar Barbacoa</h3>
-          <span class="add-cart">
-            <i class="bx bx-cart"></i>
-          </span>
           <p class="price">S/32.50</p>
+          <button class="btn-add-cart" (click)="addToCart('Pizzas familiar Barbacoa', 32.50)">Añadir al carrito</button>
         </div>
       </div>
-      <!-- Producto 1 -->
+      <!-- Producto 3 -->
       <div class="card-product">
         <div class="container-img">
           <img
@@ -49,10 +48,8 @@
         </div>
         <div class="content-card-product">
           <h3>Pizza familiar Hawaiana (pizza con piña)</h3>
-          <span class="add-cart">
-            <i class="bx bx-cart"></i>
-          </span>
           <p class="price">S/32.80</p>
+          <button class="btn-add-cart" (click)="addToCart('Pizza familiar Hawaiana (pizza con piña)', 32.80)">Añadir al carrito</button>
         </div>
       </div>
       <!-- Producto 2 -->
@@ -65,10 +62,8 @@
         </div>
         <div class="content-card-product">
           <h3>Pizzas familiar Cuatro quesos</h3>
-          <span class="add-cart">
-            <i class="bx bx-cart"></i>
-          </span>
           <p class="price">S/42.90</p>
+          <button class="btn-add-cart" (click)="addToCart('Pizzas familiar Cuatro quesos', 42.90)">Añadir al carrito</button>
         </div>
       </div>
       <!-- Producto 1 -->
@@ -81,10 +76,8 @@
         </div>
         <div class="content-card-product">
           <h3>Pizza familiar Pepperoni</h3>
-          <span class="add-cart">
-            <i class="bx bx-cart"></i>
-          </span>
           <p class="price">S/29.90</p>
+          <button class="btn-add-cart" (click)="addToCart('Pizza familiar Pepperoni', 29.90)">Añadir al carrito</button>
         </div>
       </div>
       <!-- Producto 2 -->
@@ -97,10 +90,8 @@
         </div>
         <div class="content-card-product">
           <h3>Pizza con champiñones</h3>
-          <span class="add-cart">
-            <i class="bx bx-cart"></i>
-          </span>
           <p class="price">S/31.90</p>
+          <button class="btn-add-cart" (click)="addToCart('Pizza con champiñones', 31.90)">Añadir al carrito</button>
         </div>
       </div>
       <!-- Producto 1 -->
@@ -113,10 +104,8 @@
         </div>
         <div class="content-card-product">
           <h3>FAMILIAR ULTIMATE SUPREME</h3>
-          <span class="add-cart">
-            <i class="bx bx-cart"></i>
-          </span>
           <p class="price">S/31.60</p>
+          <button class="btn-add-cart" (click)="addToCart('Familiar Ultimate Supreme', 31.60)">Añadir al carrito</button>
         </div>
       </div>
       <!-- Producto 2 -->
@@ -129,10 +118,8 @@
         </div>
         <div class="content-card-product">
           <h3>CRAZY CHEESE BREAD</h3>
-          <span class="add-cart">
-            <i class="bx bx-cart"></i>
-          </span>
           <p class="price">S/32.90</p>
+          <button class="btn-add-cart" (click)="addToCart('Crazy Cheese Bread', 32.90)">Añadir al carrito</button>
         </div>
       </div>
       <!-- Producto 2 -->
@@ -145,10 +132,8 @@
         </div>
         <div class="content-card-product">
           <h3>FAMILIAR 3 MEAT TREAT</h3>
-          <span class="add-cart">
-            <i class="bx bx-cart"></i>
-          </span>
           <p class="price">S/29.90</p>
+          <button class="btn-add-cart" (click)="addToCart('Familiar 3 Meat Treat', 29.90)">Añadir al carrito</button>
         </div>
       </div>
     </div>
