@@ -15,8 +15,9 @@ import { ProductoComponent } from './routes/administrador/producto/producto.comp
 import { PedidosComponent } from './routes/administrador/pedidos/pedidos.component';
 import { EmpleadosComponent } from './routes/administrador/empleados/empleados.component';
 import { UsuariosComponent } from './routes/administrador/usuarios/usuarios.component';
-
+import { PedidossComponent } from './pedidoss/pedidoss.component';
 const routes: Routes = [
+  { path: 'pedidoss', component: PedidossComponent }, 
   {path: '', component: HomeComponent},
   {path: 'menu', component: MenuComponent},
   {path: 'sobre-la-empresa', component: SobreEmpresaComponent},

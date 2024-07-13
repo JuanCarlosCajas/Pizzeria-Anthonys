@@ -1,57 +1,55 @@
 <header class="col-12 Cabecera">
     <a class="col-2 d-flex justify-content-center navbar-brand" routerLink="" title="home">
-        <img class="fotoCabecera" [src]="fotoCabecera" alt="">
+      <img class="fotoCabecera" [src]="fotoCabecera" alt="">
     </a>
     <div class="navbar col-7">
-        <ul class="navbar-nav me-auto mb-2 flex flex-row justify-content-evenly col-12">
-            <li class="nav-item">
-                <a class="nav-link" routerLink="menu">Menu</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" routerLink="sobre-la-empresa">Sobre la empresa</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" routerLink="carrito">Carrito</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" routerLink="sucursales">Sucursales</a>
-            </li>
-        </ul>
+      <ul class="navbar-nav me-auto mb-2 flex flex-row justify-content-evenly col-12">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="sobre-la-empresa">Sobre la empresa</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="carrito">Menu</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="sucursales">Sucursales</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="pedidoss">Lista de Pedidos</a> <!-- Enlace a PedidossComponent -->
+        </li>
+      </ul>
     </div>
     <div class="flex flex-row justify-content-evenly align-content-center col-3">
-        <div class="container col-12 d-flex justify-content-evenly">
-            <button type="button" title="Busqueda" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="This top tooltip is themed via CSS variables." class="btn boton-cabecera">
-                <i class="bx bx-search-alt-2"></i>
-            </button>
-    
-            <button type="button" title="Carrito" class="boton-cabecera" (click)="toggleCartVisibility()">
-                <i class="bx bx-cart"></i>
-                <span class="badge">{{ cart.length }}</span>
-            </button>
-            <button type="button" title="Usuario" class="boton-cabecera" routerLink="users">
-                <i class="bx bx-user"></i>
-            </button>
-        </div>
+      <div class="container col-12 d-flex justify-content-evenly">
+        <button type="button" title="Carrito" class="boton-cabecera" (click)="toggleCartVisibility()">
+          <i class="bx bx-cart"></i>
+          <span class="badge">{{ cart.length }}</span>
+        </button>
+        <button type="button" title="Usuario" class="boton-cabecera" routerLink="users">
+          <i class="bx bx-user"></i>
+        </button>
+      </div>
     </div>
-</header>
-
-<!-- Carrito modal -->
-<div class="cart-modal" *ngIf="cartVisible">
+  </header>
+  
+  <!-- Carrito modal -->
+  <div class="cart-modal" *ngIf="cartVisible">
     <div class="container-cart-products">
-        <div *ngFor="let item of cart" class="cart-product">
-            <div class="info-cart-product">
-                <span class="cantidad-producto-carrito">{{ item.quantity }}</span>
-                <p class="titulo-producto-carrito">{{ item.name }}</p>
-                <span class="precio-producto-carrito">S/{{ item.price }}</span>
-                <button type="button" (click)="removeProduct(item)">Eliminar</button>
-            </div>
+      <div *ngFor="let item of cart" class="cart-product">
+        <div class="info-cart-product">
+          <span class="cantidad-producto-carrito">{{ item.quantity }}</span>
+          <p class="titulo-producto-carrito">{{ item.name }}</p>
+          <span class="precio-producto-carrito">S/{{ item.price }}</span>
+          <button type="button" (click)="removeProduct(item)">Eliminar</button>
         </div>
-        
-        <div class="cart-total">
-            <h3>Total:</h3>
-            <span class="total-pagar">{{ totalCart }}</span>
-        </div>
-        <p *ngIf="cart.length === 0" class="cart-empty">El carrito está vacío</p>
-        <button type="button" (click)="toggleCartVisibility()">Cerrar</button>
+      </div>
+  
+      <div class="cart-total">
+        <h3>Total:</h3>
+        <span class="total-pagar">{{ totalCart }}</span>
+      </div>
+      <p *ngIf="cart.length === 0" class="cart-empty">El carrito está vacío</p>
+      <button type="button" (click)="toggleCartVisibility()" style="margin-right: 10px;">CERRAR</button>
+      <button type="button" (click)="agregarPedido()">AGREGAR PEDIDO</button>
     </div>
-</div>
+  </div>
+  

@@ -1,0 +1,13 @@
+<div class="container" >
+    <h2>Lista de Pedidos</h2>
+    <div *ngFor="let pedido of pedidos" class="pedido">
+      <h3>Pedido ID: {{ pedido.id }}</h3>
+      <p>Total: S/{{ pedido.total.toFixed(2) }}</p>
+      <div *ngFor="let item of pedido.items" class="item">
+        <span>{{ item.name }} - {{ item.quantity }} x S/{{ item.price }}</span>
+      </div>
+    </div>
+    <button (click)="limpiarPedidos()" class="btn-limpiar">Limpiar Pedidos</button>
+    <p *ngIf="pedidos.length === 0">No hay pedidos aún.</p>
+  </div>
+  

@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { PizzasService } from '../../servicios/pizzas.service';
 import { CartService } from '../../cart.service';
+import { PedidosService } from '../../pedidos.service'; 
+import { Pedido } from './pedido.model'; // Ajusta la ruta según tu estructura de proyecto
 
 @Component({
   selector: 'app-cabecera',
@@ -13,7 +15,11 @@ export class CabeceraComponent implements OnInit {
   cartVisible: boolean = false;
   fotoCabecera: string = "assets/logoAnthonys.png";
 
-  constructor(private pizzaService: PizzasService, private cartService: CartService) {}
+  constructor(
+    private pizzaService: PizzasService,
+    private cartService: CartService,
+    private pedidosService: PedidosService // Asegúrate de que este servicio esté correctamente inyectado
+  ) {}
 
   ngOnInit(): void {
     this.pizzaService.obtenerPizzas().subscribe(data => {
@@ -42,5 +48,16 @@ export class CabeceraComponent implements OnInit {
 
   removeProduct(product: any): void {
     this.cartService.removeFromCart(product);
+  }
+
+  agregarPedido(): void {
+    const nuevoPedido: Pedido = {
+      id: 0, // El servicio se encargará de asignar el ID
+      items: this.cart,
+      total: parseFloat(this.totalCart.replace('S/', ''))
+    };
+    this.pedidosService.agregarPedido(nuevoPedido);
+    this.cartService.clearCart(); // Vaciar el carrito
+    this.toggleCartVisibility(); // Cerrar el modal del carrito
   }
 }

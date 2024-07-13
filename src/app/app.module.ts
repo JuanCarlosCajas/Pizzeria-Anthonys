@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { FormsModule } from '@angular/forms';  // Importar FormsModule
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CabeceraComponent } from './components/cabecera/cabecera.component';
@@ -20,6 +20,7 @@ import { ProductoComponent } from './routes/administrador/producto/producto.comp
 import { PedidosComponent } from './routes/administrador/pedidos/pedidos.component';
 import { EmpleadosComponent } from './routes/administrador/empleados/empleados.component';
 import { UsuariosComponent } from './routes/administrador/usuarios/usuarios.component';
+import { PedidossComponent } from './pedidoss/pedidoss.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,12 +39,14 @@ import { UsuariosComponent } from './routes/administrador/usuarios/usuarios.comp
     ProductoComponent,
     PedidosComponent,
     EmpleadosComponent,
-    UsuariosComponent
+    UsuariosComponent,
+    PedidossComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
