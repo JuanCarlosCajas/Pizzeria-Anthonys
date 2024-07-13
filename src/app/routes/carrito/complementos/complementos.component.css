@@ -75,11 +75,19 @@
 }
 
 .container-img {
+	width: 100%;
+	padding-top: 100%; /* This creates a square aspect ratio */
 	position: relative;
+	overflow: hidden;
 }
 
 .container-img img {
+	position: absolute;
+	top: 0;
+	left: 0;
 	width: 100%;
+	height: 100%;
+	object-fit: cover;
 }
 
 .container-img .discount {
@@ -150,13 +158,8 @@
 /* ********************************** */
 
 .content-card-product h3 {
-	grid-row: 2/3;
-	grid-column: 1/-1;
-
-	font-weight: 400;
-	font-size: 1.6rem;
-	margin-bottom: 1rem;
-	cursor: pointer;
+	margin: 10px 0;
+	height: 4em; /* Force height for 3 lines of text */
 }
 
 .content-card-product h3:hover {

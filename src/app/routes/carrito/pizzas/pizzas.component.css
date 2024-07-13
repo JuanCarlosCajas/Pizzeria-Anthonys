@@ -73,14 +73,23 @@
 	border-radius: 0.5rem;
 	cursor: pointer;
 	box-shadow: 0 0 2px rgb(255, 0, 0);
+
 }
 
 .container-img {
+	width: 100%;
+	padding-top: 100%; /* This creates a square aspect ratio */
 	position: relative;
+	overflow: hidden;
 }
 
 .container-img img {
+	position: absolute;
+	top: 0;
+	left: 0;
 	width: 100%;
+	height: 100%;
+	object-fit: cover;
 }
 
 .container-img .discount {
@@ -141,16 +150,20 @@
 
 .content-card-product {
     padding: 15px 30px;
-    line-height: 2;
+    line-height: 3;
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
+
 .price{
     font-size: 18px;
     font-weight: 900;
 }
-
+.content-card-product h3 {
+	margin: 10px 0;
+	height: 4em; /* Force height for 3 lines of text */
+  }
 .content-card-product button{
     border: none;
     background: none;
